@@ -2,14 +2,6 @@
 layout: default
 title: All stations
 ---
-<!DOCTYPE html>
-{% assign date = '2025-02-03T18:51:00Z' %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <title>Hello, world!</title>
-</head>
-<body>
     <h1>{{ site.title }}</h1>
     <ul>
 {% for station in site.data.stations %}
@@ -21,5 +13,3 @@ title: All stations
         </li>
 {% endfor %}
     </ul>
-</body>
-</html>
