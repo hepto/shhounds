@@ -1,0 +1,24 @@
+---
+---
+<!DOCTYPE html>
+{% assign date = '2025-02-03T18:51:00Z' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello, world!</title>
+</head>
+<body>
+    <h1>{{ site.title }}</h1>
+    <ul>
+{% for station in site.data.stations %}
+        <li>
+        <p>{{ station.station_name }}</p>
+        <a href="{{ station.url }}">
+          {{ station.url }}
+        </a>
+        </li>
+{% endfor %}
+    </ul>
+    <p>Generated - {{ date | timeago }}</p>
+</body>
+</html>
