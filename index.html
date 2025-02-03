@@ -7,8 +7,8 @@ title: All stations
 {% for station in site.data.stations %}
         <li>
         <p>{{ station.station_name }}</p>
-        <a href="{{ station.url }}">
-          {{ station.url }}
+        <a href="{{ station.station_url }}">
+          {{ station.station_url }}
         </a>
         </li>
 {% endfor %}
