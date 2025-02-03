@@ -3,9 +3,17 @@ module Jekyll
     safe true
 
     def generate(site)
+
+      playlists = []
+
       site.data['stations'].each do |station|
-        site.pages << Playlist.new(site, station)
+        playlist = Playlist.new(site, station)
+        site.pages << playlist
+        playlists << { "station_name" => station['station_name'], "playlist_url" => playlist.url }
       end
+
+       site.config['playlists'] = playlists
+
     end
   end
 
